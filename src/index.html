@@ -1,39 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title>
-    <script type="module" src="/main.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Reminder</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="/main.js" defer></script>
+</head>
+<body>
+  <div class="app">
 
-  <body>
-    <main class="container">
-      <h1>Welcome to Tauri</h1>
+    <header>
+      <h1>ater Reminder</h1>
+      <p class="date" id="today-date"></p>
+    </header>
 
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
+    <section class="progress-section">
+      <div class="circle">
+        <span id="current-ml">0</span>
+        <small>ml</small>
       </div>
-      <p>Click on the Tauri logo to learn more about the framework</p>
+      <p>of <strong id="goal-ml">2000</strong>ml daily goal</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </section>
 
-      <form class="row" id="greet-form">
-        <input id="greet-input" placeholder="Enter a name..." />
-        <button type="submit">Greet</button>
-      </form>
-      <p id="greet-msg"></p>
-    </main>
-  </body>
+    <section class="buttons-section">
+      <button id="btn-150">☕ 150ml</button>
+      <button id="btn-250">🥛 250ml</button>
+      <button id="btn-500">🍶 500ml</button>
+      <button id="btn-custom" class="custom-btn">+ Custom</button>
+    </section>
+
+    <section class="log-section">
+      <h2>Today's Log</h2>
+      <ul id="log-list"></ul>
+    </section>
+
+  </div>
+</body>
 </html>
