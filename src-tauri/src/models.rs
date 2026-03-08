@@ -11,7 +11,7 @@ pub struct User {
     pub created_at: String, 
 }
 //serialize/deserialize - convert struct to JSON
-//debug- print struct with {:?} to debug
+//debug- print struct with {:?} to debug / whole struct
 //Clone- to make copies of the value
 #[derive(Debug, Serialize, Clone)]
 pub struct WaterLog {
@@ -22,10 +22,16 @@ pub struct WaterLog {
     pub logged_at: String,
 }
 
+//attributies / traits / capability
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Settings {
     pub user_id: String, 
+    pub daily_goal_ml: i32,
+    pub wake_time: String,
+    pub sleep_time: String,
+    pub reminder_interval_minutes: i32,
 }
+
 //sends this to the js frontend
 
 #[derive(Debug, Serialize, Deserialize)]
