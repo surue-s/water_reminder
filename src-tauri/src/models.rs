@@ -25,12 +25,7 @@ pub struct WaterLog {
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Settings {
     pub user_id: String, 
-    pub daily_goal_ml: i32,
-    pub wake_time: String,
-    pub sleep_time: String,
-    pub reminder_interval_minutes: i32,
 }
-
 //sends this to the js frontend
 
 #[derive(Debug, Serialize, Deserialize)]
