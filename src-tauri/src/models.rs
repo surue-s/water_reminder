@@ -15,7 +15,6 @@ pub struct User {
 //Clone- to make copies of the value
 #[derive(Debug, Serialize, Clone)]
 pub struct WaterLog {
-    
     pub id: String,
     pub user_id: String, 
     pub amount_ml: i32,
